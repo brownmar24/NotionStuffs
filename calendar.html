@@ -93,8 +93,9 @@ td>span {
 td:nth-child(even)>span {
     background-color: rgba(0,0,0,0.02);
 }
-td:last-child>span,
-td:nth-child(6)>span {
+td:last-child>span, td:nth-child(1)>span
+/*td:nth-child(6)>span*/  
+{
     color: #456d2a;
 }
 td.avui>span {
@@ -262,13 +263,11 @@ function calendari(widget, data)
     e.appendChild(fila);
 
     fila = document.createElement('tr');
-
-    for(var i = 1; i < 7; i++)
+    for(var i = 0; i < 7; i++)
     {
         fila.innerHTML += '<th>' + dies_abr[i] + '</th>';
     }
-
-    fila.innerHTML += '<th>' + dies_abr[0] + '</th>';
+    //fila.innerHTML += '<th>' + dies_abr[0] + '</th>';
     e.appendChild(fila);
 
     /* Obtinc el dia que va acabar el mes anterior */
